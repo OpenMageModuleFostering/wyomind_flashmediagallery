@@ -6,6 +6,7 @@ document.observe("dom:loaded", function() {
     paths = new Array;
     data.each(function(s) {
         if (s.selector != "") {
+            
             $$(s.selector).each(function(img) {
                 src = img.src;
 

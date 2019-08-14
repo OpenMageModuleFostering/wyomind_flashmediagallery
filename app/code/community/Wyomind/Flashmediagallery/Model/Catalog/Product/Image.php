@@ -39,12 +39,12 @@ class Wyomind_Flashmediagallery_Model_Catalog_Product_Image extends Mage_Catalog
     }
 
     public function getUrl() {
-        $baseDir = Mage::getBaseDir();
+        $baseDir = Mage::getBaseDir('media');
+       
         $file = ($this->isMedia()) ? $this->_baseFile : $this->_newFile;
-
         $path = str_replace($baseDir . DS, "", $file);
-
-        return Mage::getBaseUrl() . str_replace(DS, '/', $path);
+       
+        return Mage::getBaseUrl('media') . str_replace(DS, '/', $path);
     }
 
 }
