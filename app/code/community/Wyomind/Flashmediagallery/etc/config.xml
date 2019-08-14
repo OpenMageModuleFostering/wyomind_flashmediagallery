@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Wyomind_Flashmediagallery>
+            <version>1.0.0</version>
+        </Wyomind_Flashmediagallery>
+       
+        
+    </modules>
+    <default>
+        <flashmediagallery>
+            <settings>
+                <selector>[{"selector":".catalog-category-view. product-image IMG","width":"135","height":"135"},{"selector":".catalog-product-view  .product-image IMG","width":"265","height":"265"},{"selector":"#product-gallery-image","width":"450","height":"450"},{"selector":".product-image IMG","width":"100","height":"100"},{"selector":"","width":"","height":""},{"selector":"","width":"","height":""},{"selector":"","width":"","height":""},{"selector":"","width":"","height":""},{"selector":"","width":"","height":""},{"selector":"","width":"","height":""}]</selector>
+            </settings>
+        </flashmediagallery>
+    </default>
+    <global>
+       
+        <blocks>
+            <flashmediagallery>
+                <class>Wyomind_Flashmediagallery_Block</class>
+            </flashmediagallery>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_helper_form_gallery_content>Wyomind_Flashmediagallery_Block_Adminhtml_Catalog_Product_Helper_Form_Gallery_Content</catalog_product_helper_form_gallery_content>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <rewrite>
+             
+            <wyomind_flashmediagallery_adminhtml_catalog_product_gallery>
+                <from><![CDATA[#/admin/catalog_product_gallery/upload/#]]></from>
+                <to><![CDATA[/flashmediagallery/adminhtml_catalog_product_gallery/upload/]]></to>
+            </wyomind_flashmediagallery_adminhtml_catalog_product_gallery>
+        </rewrite>
+        <models>
+            <flashmediagallery>
+                <class>Wyomind_Flashmediagallery_Model</class>
+            </flashmediagallery>
+            <catalog>
+                <rewrite>
+                    <product_image>wyomind_flashmediagallery_model_catalog_product_image</product_image>
+                </rewrite>
+            </catalog>
+            
+        </models>
+        
+        <helpers>
+            
+            <catalog>
+                <rewrite>
+                    <image>wyomind_flashmediagallery_helper_catalog_image</image>
+                </rewrite>
+            </catalog>
+            
+        
+            <flashmediagallery>
+                <class>Wyomind_Flashmediagallery_Helper</class>
+            </flashmediagallery>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <flashmediagallery>
+                    <file>flashmediagallery.xml</file>
+                </flashmediagallery>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <flashmediagallery>
+               
+                <use>admin</use>
+                <args>
+                    <module>Wyomind_Flashmediagallery</module>
+                    <frontName>flashmediagallery</frontName>
+                </args>
+            </flashmediagallery>
+        </routers>
+    </admin>
+    <adminhtml>
+        <events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <wyomind_flashmediagallery_template>
+                        <type>model</type>
+                        <class>Wyomind_Flashmediagallery_Model_Observer</class>
+                        <method>changeTemplate</method>
+                    </wyomind_flashmediagallery_template>
+                </observers>
+               
+               
+            </adminhtml_block_html_before>
+        </events>
+        <layout>
+            <updates>
+                <flashmediagallery>
+                    <file>flashmediagallery.xml</file>
+                </flashmediagallery>
+            </updates>
+        </layout>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                       
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <flashmediagallery> 
+                                            <title>Flash Media Gallery</title>
+                                        </flashmediagallery>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl> 
+       
+    </adminhtml>
+        
+</config>

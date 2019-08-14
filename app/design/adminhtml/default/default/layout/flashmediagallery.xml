@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+  
+    <adminhtml_catalog_product_edit>
+        <reference name="head">
+           
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>flashmediagallery/gallery.js</name>
+            </action>
+        </reference>
+        
+    </adminhtml_catalog_product_edit>
+   
+</layout>

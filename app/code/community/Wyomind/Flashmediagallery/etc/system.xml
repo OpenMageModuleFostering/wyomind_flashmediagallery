@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <WYOMIND translate="label">
+            <label>WYOMIND</label>
+            <sort_order>1000000</sort_order>
+        </WYOMIND>
+    </tabs>
+    <sections>
+        <flashmediagallery translate="label">
+            <label>Flash Media Gallery</label>
+            <tab>WYOMIND</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1001</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>110</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        
+                        <selector translate="label comment">
+                            <label>Image selector</label>
+                            <frontend_type>fmgscript</frontend_type>
+                            <sort_order>0</sort_order>
+                                <comment>
+                <![CDATA[<span class="notice">List of all css selectors that must be switched to a flash object + default width/height in pixel. </span>]]>
+                            </comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </selector>
+                    </fields>
+                </settings>
+                
+            </groups>
+        </flashmediagallery>
+        
+    </sections>
+</config>
+
+

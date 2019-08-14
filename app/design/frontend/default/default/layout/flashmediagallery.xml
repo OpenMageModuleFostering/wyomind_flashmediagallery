@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+  
+    <default>
+        <reference name="head">
+           
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>flashmediagallery/script.js</name>
+            </action>
+            <block type="flashmediagallery/script" name="flashmediagallery.script" as="flashmediagallery_script" after="-"/>
+        </reference>
+    </default>
+   
+</layout>

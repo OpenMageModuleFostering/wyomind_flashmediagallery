@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Wyomind_Flashmediagallery",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "Allow to add SWF files and animated GIFs into the product's gallery.",
+    "authors": [
+    {
+        "name": "Wyomind",
+        "email": "contact@wyomind.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
