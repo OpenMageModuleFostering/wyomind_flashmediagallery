@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Wyomind_Flashmediagallery",
+    "name": "OpenMageModuleFostering\/Wyomind_Flashmediagallery",
     "type": "magento-module",
     "license": "Commercial",
     "homepage": "",
     "description": "Wyomind Flashmediagallery extension",
     "authors": [
-    {
-        "name": "Wyomind",
-        "email": "contact@wyomind.com"
-    }
-],
+        {
+            "name": "Wyomind",
+            "email": "contact@wyomind.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
